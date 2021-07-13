@@ -37,9 +37,10 @@ div {
 .hover_img1 h4 span {
   position: absolute;
   display: none;
-  z-index: 99;
-  top: 76px;
-  right: -348px;
+  top: 900%;
+  left: 412%;
+  right: auto;
+  transform: translate(-50%, -50%);
 }
 .hover_img1 h4:hover span {
   display: block;
@@ -55,9 +56,10 @@ div {
 .hover_img2 h4 span {
   position: absolute;
   display: none;
-  z-index: 99;
-  top: 76px;
-  right: -270px;
+  top: 900%;
+  left: 502%;
+  right: auto;
+  transform: translate(-50%, -50%);
 }
 .hover_img2 h4:hover span {
   display: block;
@@ -73,9 +75,10 @@ div {
 .hover_img3 h4 span {
   position: absolute;
   display: none;
-  z-index: 99;
-  top: 76px;
-  right: -161px;
+  top: 900%;
+  left: 107%;
+  right: auto;
+  transform: translate(-50%, -50%);
 }
 .hover_img3 h4:hover span {
   display: block;
@@ -92,9 +95,10 @@ div {
 .hover_img5 h4 span {
   position: absolute;
   display: none;
-  z-index: 99;
-  top: 76px;
-  right: -110px;
+  top: 900%;
+  left: -32%;
+  right: auto;
+  transform: translate(-50%, -50%);
 }
 .hover_img5 h4:hover span {
   display: block;
@@ -110,9 +114,10 @@ div {
 .hover_img6 h4 span {
   position: absolute;
   display: none;
-  z-index: 99;
-  top: 76px;
-  right: 87px;
+  top: 900%;
+  left: -385%;
+  right: auto;
+  transform: translate(-50%, -50%);
 }
 .hover_img6 h4:hover span {
   display: block;
@@ -128,9 +133,10 @@ div {
 .hover_img7 h4 span {
   position: absolute;
   display: none;
-  z-index: 99;
-  top: 76px;
-  right: 172px;
+  top: 900%;
+  left: -247%;
+  right: auto;
+  transform: translate(-50%, -50%);
 }
 .hover_img7 h4:hover span {
   display: block;
@@ -181,15 +187,20 @@ nav ul li a:hover {
   display: inline-block;
   font-size: 1.5rem;
   font-weight: 300;
-  top: 200px;
-  left: 515px;
+  top: 33%;
+  left: 34%;
+  right: auto;
+  transform: translate(-75%, -25%);
 }
 .Test {
   position: absolute;
   display: inline-block;
   font-size: 1.5rem;
   font-weight: 300;
-  top: 200px;
+  top: 36%;
+  left: 65%;
+  right: auto;
+  transform: translate(-50%, -50%);
 }
 
 footer {
