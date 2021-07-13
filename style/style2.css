@@ -51,8 +51,7 @@ nav ul li a {
   margin-inline-end: 0px;
   padding-inline-start: 40px;
 }
-nav ul li a:hover
-{
+nav ul li a:hover {
   color: red;
 }
 

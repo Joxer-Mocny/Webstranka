@@ -117,7 +117,7 @@ div {
 .hover_img6 h4:hover span {
   display: block;
 }
-.hover_img7 h4{
+.hover_img7 h4 {
   position: relative;
   font-size: 1rem;
   font-weight: 200;
@@ -148,7 +148,7 @@ main a {
 main h4:hover {
   box-shadow: 2px 2px 2px red;
 }
-main a:hover{
+main a:hover {
   box-shadow: 2px 2px 2px red;
 }
 nav {
@@ -173,8 +173,7 @@ nav ul li a {
   margin-inline-end: 0px;
   padding-inline-start: 40px;
 }
-nav ul li a:hover
-{
+nav ul li a:hover {
   color: red;
 }
 .Frontend {
