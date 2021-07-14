@@ -187,10 +187,10 @@ nav ul li a:hover {
   display: inline-block;
   font-size: 1.5rem;
   font-weight: 300;
-  top: 30%;
-  left: 34%;
+  top: 33%;
+  left: 37%;
   right: auto;
-  transform: translate(-75%, -25%);
+  transform: translate(-50%, -50%);
 }
 .Test {
   position: absolute;
@@ -198,7 +198,7 @@ nav ul li a:hover {
   font-size: 1.5rem;
   font-weight: 300;
   top: 33%;
-  left: 65%;
+  left: 60%;
   right: auto;
   transform: translate(-50%, -50%);
 }
