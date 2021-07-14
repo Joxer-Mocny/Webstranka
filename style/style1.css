@@ -16,9 +16,18 @@ body {
   background-size: cover;
 }
 main h1 {
+  font-family: "MainFont";
   display: flex;
   justify-content: center;
   font-size: 5rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+main h3 {
+  font-family: "MainFont";
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
   font-weight: 100;
   letter-spacing: 0.1rem;
 }
@@ -182,25 +191,26 @@ nav ul li a {
 nav ul li a:hover {
   color: red;
 }
-.Frontend {
+.Frontend h3 {
   position: absolute;
-  display: inline-block;
+
   font-size: 1.5rem;
   font-weight: 300;
-  top: 33%;
-  left: 37%;
+  top: 35%;
+  left: 29%;
   right: auto;
   transform: translate(-50%, -50%);
+  margin: 3%;
 }
-.Test {
+.Test h3 {
   position: absolute;
-  display: inline-block;
   font-size: 1.5rem;
   font-weight: 300;
-  top: 33%;
-  left: 60%;
+  top: 35%;
+  left: 65%;
   right: auto;
   transform: translate(-50%, -50%);
+  margin: 3%;
 }
 
 footer {
