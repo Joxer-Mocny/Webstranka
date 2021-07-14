@@ -36,9 +36,6 @@ div {
   letter-spacing: 0.5rem;
   text-decoration: none;
   color: white;
- 
-  
-  
 }
 .hover_img1 h4 span {
   position: absolute;
@@ -47,16 +44,9 @@ div {
   left: 412%;
   right: auto;
   transform: translate(-50%, -50%);
-  
- 
-  
 }
 .hover_img1 h4:hover span {
   display: block;
-  
-  
- 
- 
 }
 .hover_img2 h4 {
   position: relative;
@@ -195,7 +185,6 @@ nav ul li a {
 nav ul li a:hover {
   color: red;
 }
-
 
 footer {
   position: fixed;
