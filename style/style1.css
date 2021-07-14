@@ -23,18 +23,12 @@ main h1 {
   font-weight: 100;
   letter-spacing: 0.1rem;
 }
-main h3 {
-  font-family: "MainFont";
-  display: flex;
-  justify-content: center;
-  font-size: 3rem;
-  font-weight: 100;
-  letter-spacing: 0.1rem;
-}
+
 div {
   display: inline-block;
   margin: 13px;
 }
+
 .hover_img1 h4 {
   position: relative;
   font-size: 1rem;
@@ -42,6 +36,9 @@ div {
   letter-spacing: 0.5rem;
   text-decoration: none;
   color: white;
+ 
+  
+  
 }
 .hover_img1 h4 span {
   position: absolute;
@@ -50,9 +47,16 @@ div {
   left: 412%;
   right: auto;
   transform: translate(-50%, -50%);
+  
+ 
+  
 }
 .hover_img1 h4:hover span {
   display: block;
+  
+  
+ 
+ 
 }
 .hover_img2 h4 {
   position: relative;
@@ -191,27 +195,7 @@ nav ul li a {
 nav ul li a:hover {
   color: red;
 }
-.Frontend h3 {
-  position: absolute;
 
-  font-size: 1.5rem;
-  font-weight: 300;
-  top: 35%;
-  left: 29%;
-  right: auto;
-  transform: translate(-50%, -50%);
-  margin: 3%;
-}
-.Test h3 {
-  position: absolute;
-  font-size: 1.5rem;
-  font-weight: 300;
-  top: 35%;
-  left: 65%;
-  right: auto;
-  transform: translate(-50%, -50%);
-  margin: 3%;
-}
 
 footer {
   position: fixed;
