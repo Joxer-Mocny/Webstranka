@@ -5,6 +5,10 @@
 html {
   height: 100%;
 }
+main{
+  display: block;
+  margin-bottom: 5%;
+}
 body {
   display: grid;
   font-family: "MainFont";
