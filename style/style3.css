@@ -75,6 +75,10 @@ nav ul li a {
 nav ul li a:hover {
   color: red;
 }
+footer p{
+  font-size: 11px;
+  font-family: "MainFont";
+}
 footer {
   position: fixed;
   bottom: 0;

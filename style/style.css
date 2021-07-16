@@ -53,6 +53,10 @@ main h3 {
   font-weight: 300;
   letter-spacing: 1rem;
 }
+footer p{
+  font-size: 11px;
+  font-family: "MainFont";
+}
 
 footer {
   position: fixed;

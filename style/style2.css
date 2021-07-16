@@ -63,13 +63,14 @@ main h3 {
   font-size: 5rem;
   font-weight: 100;
 }
-main h6 {
+
+.Omne{
   display: flex;
+  font-family: "MainFont";
   text-align: center;
-  margin-inline-start: 90px;
-  margin-inline-end: 90px;
   font-size: 1.5rem;
   font-weight: 300;
+  margin: 90px;
 }
 main h6 a {
   display: flex;
@@ -80,7 +81,10 @@ main h6 a {
 main h6 a:hover{
   box-shadow: 2px 2px 2px red;
 }
-
+footer p{
+  font-size: 11px;
+  font-family: "MainFont";
+}
 footer {
   position: fixed;
   bottom: 0;
