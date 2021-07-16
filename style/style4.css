@@ -27,6 +27,7 @@ main h1 {
   font-family: "MainFont";
   justify-content: center;
   text-decoration: none;
+  font-size: 1.5rem;
   font-weight: 100;
   letter-spacing: 0.1rem;
 }
@@ -41,7 +42,15 @@ main h1 {
 .Kurz p a:hover {
   box-shadow: 2px 2px 2px red;
 }
-
+.Kurzy p{
+  display: flex;
+  font-family: "MainFont";
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
 nav {
   margin: 13px;
   margin-left: auto;

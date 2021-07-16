@@ -22,8 +22,18 @@ main h1 {
   font-size: 5rem;
   font-weight: 100;
   letter-spacing: 0.1rem;
+  margin:25px;
 }
-
+.Kontakt p{
+  display: flex;
+  font-family: "MainFont";
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  margin: 40px;
+}
 div {
   display: inline-block;
   margin: 13px;
