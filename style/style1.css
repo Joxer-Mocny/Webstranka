@@ -22,9 +22,9 @@ main h1 {
   font-size: 5rem;
   font-weight: 100;
   letter-spacing: 0.1rem;
-  margin:25px;
+  margin: 25px;
 }
-.Kontakt p{
+.Kontakt p {
   display: flex;
   font-family: "MainFont";
   justify-content: center;
@@ -195,7 +195,7 @@ nav ul li a {
 nav ul li a:hover {
   color: red;
 }
-footer p{
+footer p {
   font-size: 11px;
   font-family: "MainFont";
 }
@@ -230,9 +230,9 @@ footer {
     font-size: 5rem;
     font-weight: 100;
     letter-spacing: 0.1rem;
-    margin:25px;
+    margin: 25px;
   }
-  .Kontakt p{
+  .Kontakt p {
     display: flex;
     font-family: "MainFont";
     justify-content: center;
@@ -246,7 +246,7 @@ footer {
     display: inline-block;
     margin: 5px;
   }
-  
+
   .hover_img1 h4 {
     position: relative;
     font-size: 1rem;
@@ -304,7 +304,7 @@ footer {
   .hover_img3 h4:hover span {
     display: block;
   }
-  
+
   .hover_img5 h4 {
     position: relative;
     font-size: 1rem;
@@ -362,7 +362,7 @@ footer {
   .hover_img7 h4:hover span {
     display: block;
   }
-  
+
   main a {
     display: flex;
     justify-content: center;
@@ -382,13 +382,14 @@ footer {
     margin: 13px;
     margin-left: auto;
   }
-  
+
   nav ul {
     padding-inline-start: 0;
   }
-  
+
   nav ul li {
     display: inline-block;
+    margin: -1rem;
   }
   nav ul li a {
     text-decoration: none;
@@ -404,14 +405,13 @@ footer {
   nav ul li a:hover {
     color: red;
   }
-  footer p{
+  footer p {
     font-size: 11px;
     font-family: "MainFont";
   }
-  
+
   footer {
     position: fixed;
     bottom: 0;
   }
-  
 }
