@@ -5,7 +5,7 @@
 html {
   height: 100%;
 }
-main{
+main {
   display: block;
   margin-bottom: 5%;
 }
@@ -75,11 +75,103 @@ nav ul li a {
 nav ul li a:hover {
   color: red;
 }
-footer p{
+footer p {
   font-size: 11px;
   font-family: "MainFont";
 }
 footer {
   position: fixed;
   bottom: 0;
+}
+@media screen and (max-width: 1000px) {
+  @font-face {
+    font-family: "MainFont";
+    src: url(../open-sans/OpenSansCondensed-Light.ttf);
+  }
+  html {
+    height: 100%;
+  }
+  main {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20%;
+  }
+  body {
+    display: grid;
+    font-family: "MainFont";
+    align-items: center;
+    justify-items: center;
+    background-color: black;
+    color: white;
+    background-image: url(../images/image1m.jpg);
+    background-size: cover;
+  }
+  main h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    font-family: "MaintFont";
+  }
+  div {
+    display: inline-block;
+    margin: 13px;
+  }
+  .Projekty {
+    display: inline;
+    justify-content: center;
+  }
+  main a {
+    text-decoration: none;
+  }
+  main h4 {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: white;
+  }
+  main h4:hover {
+    box-shadow: 2px 2px 2px red;
+  }
+
+  nav {
+    margin: 13px;
+    margin-left: auto;
+  }
+
+  nav ul {
+    padding-inline-start: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin: -1rem;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    scroll-margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    font-size: 1rem;
+  }
+  nav ul li a:hover {
+    color: red;
+  }
+  footer p {
+    font-size: 11px;
+    font-family: "MainFont";
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
 }

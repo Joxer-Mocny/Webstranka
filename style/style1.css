@@ -204,3 +204,214 @@ footer {
   position: fixed;
   bottom: 0;
 }
+
+@media screen and (max-width: 1000px) {
+  @font-face {
+    font-family: "MainFont";
+    src: url(../open-sans/OpenSansCondensed-Light.ttf);
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    display: grid;
+    font-family: "MainFont";
+    align-items: center;
+    justify-items: center;
+    background-color: black;
+    color: white;
+    background-image: url(../images/image1.jpeg);
+    background-size: cover;
+  }
+  main h1 {
+    font-family: "MainFont";
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    margin:25px;
+  }
+  .Kontakt p{
+    display: flex;
+    font-family: "MainFont";
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    margin: 40px;
+  }
+  div {
+    display: inline-block;
+    margin: 5px;
+  }
+  
+  .hover_img1 h4 {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: white;
+  }
+  .hover_img1 h4 span {
+    position: absolute;
+    display: none;
+    top: 900%;
+    left: 359%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+  .hover_img1 h4:hover span {
+    display: block;
+  }
+  .hover_img2 h4 {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: white;
+  }
+  .hover_img2 h4 span {
+    position: absolute;
+    display: none;
+    top: 900%;
+    left: 414%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+  .hover_img2 h4:hover span {
+    display: block;
+  }
+  .hover_img3 h4 {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: white;
+  }
+  .hover_img3 h4 span {
+    position: absolute;
+    display: none;
+    top: 900%;
+    left: 107%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+  .hover_img3 h4:hover span {
+    display: block;
+  }
+  
+  .hover_img5 h4 {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: white;
+  }
+  .hover_img5 h4 span {
+    position: absolute;
+    display: none;
+    top: 900%;
+    left: -32%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+  .hover_img5 h4:hover span {
+    display: block;
+  }
+  .hover_img6 h4 {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: white;
+  }
+  .hover_img6 h4 span {
+    position: absolute;
+    display: none;
+    top: 900%;
+    left: -385%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+  .hover_img6 h4:hover span {
+    display: block;
+  }
+  .hover_img7 h4 {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: white;
+  }
+  .hover_img7 h4 span {
+    position: absolute;
+    display: none;
+    top: 900%;
+    left: -222%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+  .hover_img7 h4:hover span {
+    display: block;
+  }
+  
+  main a {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: white;
+  }
+  main h4:hover {
+    box-shadow: 2px 2px 2px red;
+  }
+  main a:hover {
+    box-shadow: 2px 2px 2px red;
+  }
+  nav {
+    margin: 13px;
+    margin-left: auto;
+  }
+  
+  nav ul {
+    padding-inline-start: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    scroll-margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    font-size: 1rem;
+  }
+  nav ul li a:hover {
+    color: red;
+  }
+  footer p{
+    font-size: 11px;
+    font-family: "MainFont";
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+  
+}

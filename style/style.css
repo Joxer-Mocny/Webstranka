@@ -102,6 +102,7 @@ footer {
 
   nav ul li {
     display: inline-block;
+    margin: -1rem;
   }
   nav ul li a {
     text-decoration: none;
