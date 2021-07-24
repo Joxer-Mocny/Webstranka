@@ -63,7 +63,7 @@ footer {
   position: fixed;
   bottom: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   @font-face {
     font-family: "MainFont";
     src: url(../open-sans/OpenSansCondensed-Light.ttf);
