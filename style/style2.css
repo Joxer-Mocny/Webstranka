@@ -124,16 +124,18 @@ footer {
   }
   
   nav {
-    margin: 13px;
+    margin-right: auto;
     margin-left: auto;
   }
   
   nav ul {
-    padding-inline-start: auto;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
   }
   
   nav ul li {
     display: inline-block;
+    margin: -14;
   }
   nav ul li a {
     text-decoration: none;
@@ -143,7 +145,8 @@ footer {
     scroll-margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
     font-size: 1rem;
   }
   nav ul li a:hover {
