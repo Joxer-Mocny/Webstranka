@@ -30,6 +30,7 @@ main h1 {
   font-size: 1.5rem;
   font-weight: 100;
   letter-spacing: 0.1rem;
+  margin-bottom: 3rem;
 }
 .Kurz p a {
   display: flex;
@@ -62,7 +63,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  margin:-1rem;
+  margin: -1rem;
 }
 nav ul li a {
   text-decoration: none;
