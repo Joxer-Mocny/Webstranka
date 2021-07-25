@@ -79,7 +79,8 @@ footer {
     justify-items: center;
     background-color: black;
     color: white;
-    background-image: url(../images/image1m.jpg);
+    background-image: url(../images/imageM.jpg);
+    background-size: cover;
   }
   main {
     margin-top: -34px;

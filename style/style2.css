@@ -109,7 +109,10 @@ footer {
     background-image: url(../images/image1m.jpg);
     background-size: cover;
   }
-  
+  main {
+    display: flex;
+    margin-top: -34px;
+  }
   main a {
     display: inline-block;
     font-size: 1rem;
@@ -122,17 +125,17 @@ footer {
     margin: 0 auto;
     width: 290px;
   }
-  
+
   nav {
     margin-right: auto;
     margin-left: auto;
   }
-  
+
   nav ul {
     padding-inline-start: 0;
     padding-inline-end: 0;
   }
-  
+
   nav ul li {
     display: inline-block;
     margin: -14;
@@ -152,7 +155,7 @@ footer {
   nav ul li a:hover {
     color: red;
   }
-  
+
   main h3 {
     margin-left: auto;
     margin-right: auto;
@@ -161,7 +164,7 @@ footer {
     font-size: 5rem;
     font-weight: 100;
   }
-  
+
   .Omne {
     display: flex;
     font-family: "MainFont";
