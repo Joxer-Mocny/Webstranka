@@ -63,7 +63,7 @@ footer {
   position: fixed;
   bottom: 0;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
   @font-face {
     font-family: "MainFont";
     src: url(../open-sans/OpenSansCondensed-Light.ttf);
@@ -79,7 +79,7 @@ footer {
     justify-items: center;
     background-color: black;
     color: white;
-    background-image: url(../images/image1m.jpg);
+    background-image: url(../images/image1.jpeg);
   }
   main {
     margin-top: -34px;
@@ -87,7 +87,7 @@ footer {
   main h1 {
     display: flex;
     justify-content: center;
-    font-size: 5rem;
+    font-size: 14rem;
     font-weight: 100;
     letter-spacing: 0.1rem;
   }
@@ -102,7 +102,7 @@ footer {
 
   nav ul li {
     display: inline-block;
-    margin: -1rem;
+    margin: 1px;
   }
   nav ul li a {
     text-decoration: none;
@@ -112,7 +112,8 @@ footer {
     scroll-margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
     font-size: 1rem;
   }
   nav ul li a:hover {
@@ -121,7 +122,7 @@ footer {
   main h3 {
     display: flex;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 6.5rem;
     font-weight: 300;
     letter-spacing: 1rem;
   }
