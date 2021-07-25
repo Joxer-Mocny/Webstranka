@@ -92,8 +92,8 @@ footer {
     letter-spacing: 0.1rem;
   }
   nav {
-    margin: 13px;
-    margin-left: auto;
+    margin-right: auto;
+    margin-left: -7px;
   }
 
   nav ul {
