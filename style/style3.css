@@ -146,11 +146,12 @@ footer {
 
   nav ul {
     padding-inline-start: 0;
+    
   }
 
   nav ul li {
     display: inline-block;
-    
+    margin:-1rem;
   }
   nav ul li a {
     text-decoration: none;
