@@ -110,7 +110,6 @@ footer {
     background-size: cover;
   }
   main {
-    
     margin-top: -34px;
   }
   main a {
@@ -122,8 +121,9 @@ footer {
     color: white;
   }
   .photo {
-    margin: 0 auto;
     width: 290px;
+    margin-left: 6rem;
+    margin-right: 6rem;
   }
 
   nav {
@@ -171,7 +171,7 @@ footer {
     text-align: center;
     font-size: 1rem;
     font-weight: 300;
-    margin: 20px;
+
     width: auto;
   }
   main h6 a {
@@ -191,5 +191,9 @@ footer {
   footer {
     position: fixed;
     bottom: 0;
+  }
+  div {
+    display: inline-block;
+    margin: 0rem;
   }
 }
