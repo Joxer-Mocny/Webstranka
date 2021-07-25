@@ -30,7 +30,7 @@ main h1 {
   font-size: 1.5rem;
   font-weight: 100;
   letter-spacing: 0.1rem;
-  margin-bottom: 3rem;
+  
 }
 .Kurz p a {
   display: flex;
@@ -51,6 +51,7 @@ main h1 {
   font-size: 1rem;
   font-weight: 100;
   letter-spacing: 0.1rem;
+  margin-bottom: 3rem;
 }
 nav {
   margin: 13px;
