@@ -233,14 +233,15 @@ footer {
     margin: 25px;
   }
   .Kontakt p {
-    display: flex;
+    display: block;
     font-family: "MainFont";
     justify-content: center;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 100;
     letter-spacing: 0.1rem;
-    margin: 40px;
+    margin-left: 2rem;
+    margin-right: 0rem;
   }
   div {
     display: inline-block;
