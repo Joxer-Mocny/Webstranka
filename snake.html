@@ -27,11 +27,11 @@
         display: inline-block;
         margin: 0 0.25em;
       }
-      a{
+      a {
         text-decoration: none;
         color: #000000;
       }
-      h2 strong{
+      h2 strong {
         display: inline-block;
         margin: 0 0.25em;
       }
@@ -161,28 +161,28 @@
 
       //randomize food position
       function resetFood() {
-				// GAME OVER (nowhere to go)
-				// if (snakeLength === tileCountX * tileCountY) {
-				// 	gameOver();
-				// }
+        // GAME OVER (nowhere to go)
+        // if (snakeLength === tileCountX * tileCountY) {
+        // 	gameOver();
+        // }
 
-				foodPosX = Math.floor(Math.random() * tileCountX) * tileSize;
-				foodPosY = Math.floor(Math.random() * tileCountY) * tileSize;
+        foodPosX = Math.floor(Math.random() * tileCountX) * tileSize;
+        foodPosY = Math.floor(Math.random() * tileCountY) * tileSize;
 
-				// dont spawn food on snakes head
-				if (foodPosX === snakePosX && foodPosY === snakePosY) {
-					resetFood();
-				}
+        // dont spawn food on snakes head
+        if (foodPosX === snakePosX && foodPosY === snakePosY) {
+          resetFood();
+        }
 
-				// dont spawn food on any snake part
-				if (
-					tail.some(
-						(snakePart) => snakePart.x === foodPosX && snakePart.y === foodPosY
-					)
-				) {
-					resetFood();
-				}
-			}
+        // dont spawn food on any snake part
+        if (
+          tail.some(
+            (snakePart) => snakePart.x === foodPosX && snakePart.y === foodPosY
+          )
+        ) {
+          resetFood();
+        }
+      }
       //game over
       //keyboard restarts game
 
@@ -229,84 +229,82 @@
         }
       }
       // touchpad
-// Touch Test
-let pageWidth = window.innerWidth || document.body.clientWidth;
-let treshold = Math.max(1,Math.floor(0.01 * (pageWidth)));
-let touchstartX = 0;
-let touchstartY = 0;
-let touchendX = 0;
-let touchendY = 0;
+      let pageWidth = window.innerWidth || document.body.clientWidth;
+      let treshold = Math.max(1, Math.floor(0.01 * pageWidth));
+      let touchstartX = 0;
+      let touchstartY = 0;
+      let touchendX = 0;
+      let touchendY = 0;
 
-const limit = Math.tan(45 * 1.5 / 180 * Math.PI);
-//const gestureZone = document.getElementById('modalContent');
+      const limit = Math.tan(((45 * 1.5) / 180) * Math.PI);
+      //const gestureZone = document.getElementById('modalContent');
 
-canvas.addEventListener('touchstart', function(event) {
-    event.preventDefault()  
-  touchstartX = event.changedTouches[0].screenX;
-    touchstartY = event.changedTouches[0].screenY;
-}, false);
+      canvas.addEventListener(
+        "touchstart",
+        function (event) {
+          event.preventDefault();
+          touchstartX = event.changedTouches[0].screenX;
+          touchstartY = event.changedTouches[0].screenY;
+        },
+        false
+      );
 
-canvas.addEventListener('touchend', function(event) {
-      event.preventDefault()
-    touchendX = event.changedTouches[0].screenX;
-    touchendY = event.changedTouches[0].screenY;
-    handleGesture(event);
-}, false);
+      canvas.addEventListener(
+        "touchend",
+        function (event) {
+          event.preventDefault();
+          touchendX = event.changedTouches[0].screenX;
+          touchendY = event.changedTouches[0].screenY;
+          handleGesture(event);
+        },
+        false
+      );
 
-function handleGesture(e) {
-    let x = touchendX - touchstartX;
-    let y = touchendY - touchstartY;
-    let xy = Math.abs(x / y);
-    let yx = Math.abs(y / x);
-    if (Math.abs(x) > treshold || Math.abs(y) > treshold || snake.dx === 0 ) {
-        if (yx <= limit) {
+      function handleGesture(e) {
+        let x = touchendX - touchstartX;
+        let y = touchendY - touchstartY;
+        let xy = Math.abs(x / y);
+        let yx = Math.abs(y / x);
+        if (
+          Math.abs(x) > treshold ||
+          Math.abs(y) > treshold ||
+          snake.dx === 0
+        ) {
+          if (yx <= limit) {
             if (x < 0) {
-                console.log("left");
-              if (snake.dx === 0){ 
-              snake.dx = -grid;
-               snake.dy = 0;};
+              console.log("left");
+              if (snake.dx === 0) {
+                snake.dx = -grid;
+                snake.dy = 0;
+              }
             } else {
-                console.log("right");
-              if (snake.dx === 0){
-              snake.dx = grid;
-               snake.dy = 0;}
+              console.log("right");
+              if (snake.dx === 0) {
+                snake.dx = grid;
+                snake.dy = 0;
+              }
             }
-        }
-        if (xy <= limit) {
-            if (y < 0 ) {
-                console.log("top");
-              if (snake.dy === 0){
-              
-              snake.dy = -grid;
-                    snake.dx = 0;}
-            } else {
-           
-              console.log("bottom");
-              if (snake.dy === 0){
-                 snake.dy = grid;
+          }
+          if (xy <= limit) {
+            if (y < 0) {
+              console.log("top");
+              if (snake.dy === 0) {
+                snake.dy = -grid;
                 snake.dx = 0;
-            }}
+              }
+            } else {
+              console.log("bottom");
+              if (snake.dy === 0) {
+                snake.dy = grid;
+                snake.dx = 0;
+              }
+            }
+          }
+        } else {
+          console.log("tap");
         }
-    } else {
-        console.log("tap");
-    }
-}
+      }
 
-
- function init () {
-  snake.load_state();
-  snake.init_draw();
-  snake.draw_state();
-
-  window.onkeydown = snake.keydown;
-
-  document.body.addEventListener("touchstart", snake.touch_start, false);
-  document.body.addEventListener("touchend", snake.touch_end, false);
-
-  window.setTimeout(snake.iterate, 500);
-}
-
-	
       //grid
       function drawGrid() {
         for (let i = 0; i < tileCountX; i++) {
