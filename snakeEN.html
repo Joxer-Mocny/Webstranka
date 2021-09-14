@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>My absolute snake son</title>
+    <style>
+      body {
+        background: #2a623d;
+        text-align: center;
+      }
+      canvas {
+        border: 10px solid #000000;
+      }
+
+      h1 {
+        margin-top: 0;
+        font-size: 4em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        letter-spacing: -10px;
+      }
+
+      h1 strong {
+        font-size: 1.35em;
+        display: inline-block;
+        margin: 0 0.25em;
+      }
+      a{
+        text-decoration: none;
+        color: #000000;
+      }
+      h2 strong{
+        display: inline-block;
+        margin: 0 0.25em;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="600" height="600"></canvas>
+
+    <h1>0</h1>
+
+    <a href="projektyEN.html"><h2>Back</h2></a>
+
+    <script>
+      //listener
+      document.addEventListener("keydown", keyPush);
+
+      //canvas
+      const canvas = document.querySelector("canvas");
+      const title = document.querySelector("h1");
+      const ctx = canvas.getContext("2d");
+
+      //player
+      const tileSize = 30;
+      let snakeSpeed = tileSize;
+      let snakePosX = 0;
+      let snakePosY = canvas.height / 2;
+
+      let velocityX = 1;
+      let velocityY = 0;
+
+      let tail = [];
+      let snakeLenght = 4;
+
+      //food
+      let foodPosX = 0;
+      let foodPosY = 0;
+
+      //game
+      let gameIsRunning = true;
+
+      let fps = 13;
+      let score = 0;
+
+      const tileCountX = canvas.width / tileSize;
+      const tileCountY = canvas.height / tileSize;
+
+      //loop
+      function gameLoop() {
+        if (gameIsRunning) {
+          drawStuff();
+          moveStuff();
+          setTimeout(gameLoop, 1000 / fps);
+        }
+      }
+
+      resetFood();
+      gameLoop();
+
+      //move everything
+      function moveStuff() {
+        snakePosX += snakeSpeed * velocityX;
+        snakePosY += snakeSpeed * velocityY;
+
+        //wall collision
+
+        if (snakePosX > canvas.width - tileSize) {
+          snakePosX = 0;
+        }
+        if (snakePosX < 0) {
+          snakePosX = canvas.width;
+        }
+
+        if (snakePosY > canvas.height - tileSize) {
+          snakePosY = 0;
+        }
+        if (snakePosY < 0) {
+          snakePosY = canvas.height;
+        }
+        //GAMEOVER (crash into myself)
+        tail.forEach((snakePart) => {
+          if (snakePosX === snakePart.x && snakePosY === snakePart.y) {
+            gameOver();
+          }
+        });
+
+        //tail
+        tail.push({ x: snakePosX, y: snakePosY });
+
+        //forget earliest parts of snake
+        tail = tail.slice(-1 * snakeLenght);
+
+        //food collision
+
+        if (snakePosX === foodPosX && snakePosY === foodPosY) {
+          // ++fps;
+          ++snakeLenght;
+          title.textContent = ++score;
+          resetFood();
+        }
+      }
+
+      //draw everything
+
+      function drawStuff() {
+        //backround
+        rectangle("#aaaaaa", 0, 0, canvas.width, canvas.height);
+
+        //grid
+        drawGrid();
+
+        //food
+        rectangle("silver", foodPosX, foodPosY, tileSize, tileSize);
+
+        //tail
+        tail.forEach((snakePart) =>
+          rectangle("#2a623d", snakePart.x, snakePart.y, tileSize, tileSize)
+        );
+
+        //sssnake
+        rectangle("green", snakePosX, snakePosY, tileSize, tileSize);
+      }
+
+      function rectangle(color, x, y, width, height) {
+        ctx.fillStyle = color;
+        ctx.fillRect(x, y, width, height);
+      }
+
+      //randomize food position
+      function resetFood() {
+				// GAME OVER (nowhere to go)
+				// if (snakeLength === tileCountX * tileCountY) {
+				// 	gameOver();
+				// }
+
+				foodPosX = Math.floor(Math.random() * tileCountX) * tileSize;
+				foodPosY = Math.floor(Math.random() * tileCountY) * tileSize;
+
+				// dont spawn food on snakes head
+				if (foodPosX === snakePosX && foodPosY === snakePosY) {
+					resetFood();
+				}
+
+				// dont spawn food on any snake part
+				if (
+					tail.some(
+						(snakePart) => snakePart.x === foodPosX && snakePart.y === foodPosY
+					)
+				) {
+					resetFood();
+				}
+			}
+      //game over
+      //keyboard restarts game
+
+      function gameOver() {
+        title.innerHTML = `☠️ <strong> ${score} </strong> ☠️`;
+        gameIsRunning = false;
+      }
+
+      //Keyboard
+
+      function keyPush(event) {
+        switch (event.key) {
+          case "ArrowLeft":
+            if (velocityX !== 1) {
+              velocityX = -1;
+              velocityY = 0;
+            }
+            break;
+
+          case "ArrowUp":
+            if (velocityY !== 1) {
+              velocityX = 0;
+              velocityY = -1;
+            }
+            break;
+
+          case "ArrowRight":
+            if (velocityX !== -1) {
+              velocityX = 1;
+              velocityY = 0;
+            }
+            break;
+
+          case "ArrowDown":
+            if (velocityY !== -1) {
+              velocityX = 0;
+              velocityY = 1;
+            }
+            break;
+          default:
+            // restart game
+            if (!gameIsRunning) location.reload();
+            break;
+        }
+      }
+      // touchpad
+      function touch_end (event) {
+		var touches = event.changedTouches;
+		var end_pos = [touches[0].pageX, touches[0].pageY];
+		var dX = end_pos[0] - snake._touch_start[0],
+			dY = end_pos[1] - snake._touch_start[1],
+			c = Math.sqrt(dX*dX + dY*dY),
+			alpha = Math.acos(dX/c);
+
+		if (alpha < Math.PI * 1/4) {
+			snake.state.direction = [1, 0];
+		} else if (alpha > Math.PI * 3/4) {
+			snake.state.direction = [-1, 0];
+		} else if (dY > 0) {
+			snake.state.direction = [0, 1];
+		} else {
+			snake.state.direction = [0, -1];
+		}
+  }
+	
+      //grid
+      function drawGrid() {
+        for (let i = 0; i < tileCountX; i++) {
+          for (let j = 0; j < tileCountY; j++) {
+            rectangle(
+              "#1a472a",
+              tileSize * i,
+              tileSize * j,
+              tileSize - 1,
+              tileSize - 1
+            );
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
