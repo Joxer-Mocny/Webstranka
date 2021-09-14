@@ -247,6 +247,20 @@
 			snake.state.direction = [0, -1];
 		}
   }
+
+
+ function init () {
+  snake.load_state();
+  snake.init_draw();
+  snake.draw_state();
+
+  window.onkeydown = snake.keydown;
+
+  document.body.addEventListener("touchstart", snake.touch_start, false);
+  document.body.addEventListener("touchend", snake.touch_end, false);
+
+  window.setTimeout(snake.iterate, 500);
+}
 	
       //grid
       function drawGrid() {
