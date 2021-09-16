@@ -38,6 +38,7 @@
 
       @media screen and (max-width: 1080px) {
         body {
+          width: 700px;
           background: #2a623d;
           text-align: center;
         }
@@ -83,11 +84,11 @@
     <button class="btn" onclick="movedown()">DOWN</button>
     <button class="btn" onclick="moveleft()">LEFT</button>
     <button class="btn" onclick="moveright()">RIGHT</button>
+    <button class="btn" onclick="restart()">Restart</button>
 
     <script>
       //listener
       document.addEventListener("keydown", keyPush);
-     
 
       //canvas
       const canvas = document.querySelector("canvas");
@@ -270,35 +271,38 @@
         }
       }
       // touchpad
-             function moveleft(){            
-                               
-              velocityX = -1;
-              velocityY = 0;
-            }
-           
+      function moveleft() {
+        if (velocityX !== 1) {
+          velocityX = -1;
+          velocityY = 0;
+        }
+      }
 
-           function moveup(){
+      function moveup() {
+        if (velocityY !== 1) {
+          velocityX = 0;
+          velocityY = -1;
+        }
+      }
 
-                 
-               velocityX = 0;
-              velocityY = -1;
-            }
-     
+      function moveright() {
+        if (velocityX !== -1) {
+          velocityX = 1;
+          velocityY = 0;
+        }
+      }
 
-          function moveright()
-             {
-              velocityX = 1;
-              velocityY = 0;
-            }
-     
+      function movedown() {
+        if (velocityY !== -1) {
+          velocityX = 0;
+          velocityY = 1;
+        }
+      }
+      function restart() {
+        if (!gameIsRunning) location.reload();
+      }
 
-      function movedown(){
-              velocityX = 0;
-              velocityY = 1;
-            }
-     
-     
-      
+      // restart game
 
       //grid
       function drawGrid() {
