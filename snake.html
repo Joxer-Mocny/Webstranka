@@ -74,25 +74,26 @@
         .btn {
           display: flow-root;
         }
-        .btnU{
+        .btnU {
           width: 90px;
+          height: 150px;
+        }
+        .btnD {
+          width: 90px;
+          height: 150px;
+        }
+        .btnL {
+          width: 150px;
           height: 90px;
         }
-        .btnD{
-          width: 90px;
+        .btnR {
+          width: 150px;
           height: 90px;
         }
-        .btnL{
+        .btnRes {
           width: 90px;
           height: 90px;
-        }
-        .btnR{
-          width: 90px;
-          height: 90px;
-        }
-        .btnRes{
-          width: 90px;
-          height: 90px;
+          transform: translate(0px, 124px);
         }
       }
     </style>
@@ -106,11 +107,11 @@
 
     <a href="projekty.html"><h2>Späť</h2></a>
     <div class="btn">
-      <button class="btnU" onclick="moveup()">UP</button>
-      <button class="btnD" onclick="movedown()">DOWN</button>
       <button class="btnL" onclick="moveleft()">LEFT</button>
-      <button class="btnR" onclick="moveright()">RIGHT</button>
+      <button class="btnU" onclick="moveup()">UP</button>
       <button class="btnRes" onclick="restart()">Restart</button>
+      <button class="btnD" onclick="movedown()">DOWN</button>
+      <button class="btnR" onclick="moveright()">RIGHT</button>
     </div>
     <script>
       //listener
@@ -328,8 +329,6 @@
       function restart() {
         if (!gameIsRunning) location.reload();
       }
-
-      
 
       //grid
       function drawGrid() {
