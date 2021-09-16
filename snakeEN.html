@@ -35,6 +35,62 @@
         display: inline-block;
         margin: 0 0.25em;
       }
+      @media screen and (max-width: 1080px) {
+        body {
+          width: 700px;
+          background: #2a623d;
+          text-align: center;
+        }
+        canvas {
+          border: 10px solid #000000;
+          transform: translate(0px, 1px);
+        }
+
+        h1 {
+          margin-top: 0;
+          font-size: 4em;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-weight: bold;
+          letter-spacing: -10px;
+        }
+
+        h1 strong {
+          font-size: 1.35em;
+          display: inline-block;
+          margin: 0 0.25em;
+        }
+        a {
+          text-decoration: none;
+          color: #000000;
+        }
+        h2 strong {
+          display: inline-block;
+          margin: 0 0.25em;
+        }
+        .btn {
+          display: flow-root;
+        }
+        .btnU{
+          width: 90px;
+          height: 90px;
+        }
+        .btnD{
+          width: 90px;
+          height: 90px;
+        }
+        .btnL{
+          width: 90px;
+          height: 90px;
+        }
+        .btnR{
+          width: 90px;
+          height: 90px;
+        }
+        .btnRes{
+          width: 90px;
+          height: 90px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -43,6 +99,13 @@
     <h1>0</h1>
 
     <a href="projektyEN.html"><h2>Back</h2></a>
+    <div class="btn">
+      <button class="btnU" onclick="moveup()">UP</button>
+      <button class="btnD" onclick="movedown()">DOWN</button>
+      <button class="btnL" onclick="moveleft()">LEFT</button>
+      <button class="btnR" onclick="moveright()">RIGHT</button>
+      <button class="btnRes" onclick="restart()">Restart</button>
+    </div>
 
     <script>
       //listener
@@ -228,25 +291,38 @@
             break;
         }
       }
-      // touchpad
-      function touch_end (event) {
-		var touches = event.changedTouches;
-		var end_pos = [touches[0].pageX, touches[0].pageY];
-		var dX = end_pos[0] - snake._touch_start[0],
-			dY = end_pos[1] - snake._touch_start[1],
-			c = Math.sqrt(dX*dX + dY*dY),
-			alpha = Math.acos(dX/c);
+    // touchpad
+    function moveleft() {
+        if (velocityX !== 1) {
+          velocityX = -1;
+          velocityY = 0;
+        }
+      }
 
-		if (alpha < Math.PI * 1/4) {
-			snake.state.direction = [1, 0];
-		} else if (alpha > Math.PI * 3/4) {
-			snake.state.direction = [-1, 0];
-		} else if (dY > 0) {
-			snake.state.direction = [0, 1];
-		} else {
-			snake.state.direction = [0, -1];
-		}
-  }
+      function moveup() {
+        if (velocityY !== 1) {
+          velocityX = 0;
+          velocityY = -1;
+        }
+      }
+
+      function moveright() {
+        if (velocityX !== -1) {
+          velocityX = 1;
+          velocityY = 0;
+        }
+      }
+
+      function movedown() {
+        if (velocityY !== -1) {
+          velocityX = 0;
+          velocityY = 1;
+        }
+      }
+      // restart game
+      function restart() {
+        if (!gameIsRunning) location.reload();
+      }
 	
       //grid
       function drawGrid() {

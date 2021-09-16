@@ -35,6 +35,9 @@
         display: inline-block;
         margin: 0 0.25em;
       }
+      .btn {
+        display: none;
+      }
 
       @media screen and (max-width: 1080px) {
         body {
@@ -68,6 +71,29 @@
           display: inline-block;
           margin: 0 0.25em;
         }
+        .btn {
+          display: flow-root;
+        }
+        .btnU{
+          width: 90px;
+          height: 90px;
+        }
+        .btnD{
+          width: 90px;
+          height: 90px;
+        }
+        .btnL{
+          width: 90px;
+          height: 90px;
+        }
+        .btnR{
+          width: 90px;
+          height: 90px;
+        }
+        .btnRes{
+          width: 90px;
+          height: 90px;
+        }
       }
     </style>
   </head>
@@ -79,13 +105,13 @@
     <h1>0</h1>
 
     <a href="projekty.html"><h2>Späť</h2></a>
-
-    <button class="btn" onclick="moveup()">UP</button>
-    <button class="btn" onclick="movedown()">DOWN</button>
-    <button class="btn" onclick="moveleft()">LEFT</button>
-    <button class="btn" onclick="moveright()">RIGHT</button>
-    <button class="btn" onclick="restart()">Restart</button>
-
+    <div class="btn">
+      <button class="btnU" onclick="moveup()">UP</button>
+      <button class="btnD" onclick="movedown()">DOWN</button>
+      <button class="btnL" onclick="moveleft()">LEFT</button>
+      <button class="btnR" onclick="moveright()">RIGHT</button>
+      <button class="btnRes" onclick="restart()">Restart</button>
+    </div>
     <script>
       //listener
       document.addEventListener("keydown", keyPush);
@@ -298,11 +324,12 @@
           velocityY = 1;
         }
       }
+      // restart game
       function restart() {
         if (!gameIsRunning) location.reload();
       }
 
-      // restart game
+      
 
       //grid
       function drawGrid() {
