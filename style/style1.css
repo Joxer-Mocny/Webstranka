@@ -408,7 +408,7 @@ footer {
 
   .FrontEnd{
     display:inline-block;
-    margin-inline-start: 5%;
+    margin-inline-start: -5%;
     margin-bottom: 50%;
 
   }
