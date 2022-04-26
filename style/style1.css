@@ -402,7 +402,8 @@ footer {
   }
   div {
     display: inline-block;
-    margin: 5px;
+    margin: 0.1rem;
+    transform:translate(15%,15%);
   }
 
   .FrontEnd{
@@ -411,6 +412,7 @@ footer {
     margin-bottom: 50%;
 
   }
+
 
   .hover_img1 h4 {
     position: relative;
